@@ -26,11 +26,7 @@
 #define RAISE 2
 #define ADJUST 3
 
-&sk {
-	quick-release;
-};
-
-/ {
+/{
    
     // Activate ADJUST layer by pressing raise and lower
     conditional_layers {
@@ -53,7 +49,7 @@
             bindings = <&kp C_PWR>;
         };
     };
-    macros {
+    //macros {
         //next_tab: next_tab {
         //    label = "Next Tab";
         //    compatible = "zmk,behavior-macro";
