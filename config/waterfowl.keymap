@@ -14,7 +14,7 @@
 #include "includes/settings_pd.dtsi"
 //#include "includes/conditional_layers.dtsi"
 #include "includes/macros.dtsi"
-#include "includes/combos.dtsi"
+//#include "includes/combos.dtsi"
 #include "includes/behaviours_homerow_mods.dtsi"
 //#include "includes/behaviours_mod_morph.dtsi"
 #include "includes/behaviours_other.dtsi"
@@ -131,7 +131,7 @@
  */
 			bindings = <
 	&kp Q		&kp W		    &kp F		    &kp P		&kp G			&kp J	    &kp L	    &kp U		&kp Y		&kp SEMICOLON
-	&kp A	    	&kp R	        &kp S	        &kp T	    &kp D			&kp H	    &kp N	    &kp E	    &kp I	    &kp O
+	&kp A	    &kp R	        &kp S	        &kp T	    &kp D			&kp H	    &kp N	    &kp E	    &kp I	    &kp O
 	&kp Z		&mt LCTRL X	    &mt LALT C	    &mt LGUI V	&kp B			&kp K	    &mt RGUI M  &td_0	    &td_1   	&td_2
 	&kp	CAPS    &mt LSHFT ESC	&lt LOWER TAB	&kp SPACE	&kp C_PP	    &kp C_POWER	&mt ENTER	&mo RAISE 	&kp BSPC	&kp F5
 			>;
