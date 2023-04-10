@@ -9,9 +9,9 @@
 };
 
 // Enable power domain on rgb underglow led strip
-&led_strip {
-    power-domain = <&pd_ext_power>;
-};
+//&led_strip {
+//    power-domain = <&pd_ext_power>;
+//};
 
 // Enable device power management policy on pd_ext_power
 / {
