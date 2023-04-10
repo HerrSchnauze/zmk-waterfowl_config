@@ -164,7 +164,7 @@
 		raise_layer {
             label = " RAISE";
 			bindings = <
-	&td_4		&kp PRNT	        &kp UP		        &kp UNDER	        &kp EQUAL	    &kp PLUS    &kp N7	    &kp N8		&kp N9		    &kp STAR
+	&td_4		&kp PRCNT	        &kp UP		        &kp UNDER	        &kp EQUAL	    &kp PLUS    &kp N7	    &kp N8		&kp N9		    &kp STAR
 	&kp TAB	    &kp LEFT            &kp DOWN            &kp RIGHT           &kp DOT		    &kp MINUS   &kp N4	    &kp N5	    &kp N6	        &kp FSLH
 	&kp C_PREV	&mt LCTRL C_NEXT    &mt LALT C_BRI_UP	&mt LGUI C_BRI_DN	&kp COMMA	    &kp N0	    &mt RGUI N1 &mt RALT N2 &mt RCTRL N3    &td_2
     &trans      &trans	            &trans      	    &trans  	        &trans          &trans  	&trans  	&trans   	&trans  	    &trans
