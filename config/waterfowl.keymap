@@ -11,11 +11,13 @@
 /* Layers */
 #define BASE 0
 #define LOWER 1
+#define RAISE 2
 
 /{
 	keymap {
 		compatible = "zmk,keymap";
 		default_layer {
+		label = " COLEMAK"
 /* BASE
  *
  * ,----------------------------------.                      ,----------------------------------.
@@ -33,7 +35,7 @@
 	&kp Q	  &kp W		 &kp F	     &kp P      &kp G		&kp J	    &kp L	&kp U  &kp Y	 &kp SEMICOLON
 	&kp A	  &kp R	         &kp S	     &kp T	 &kp D		&kp H	    &kp N	&kp E  &kp I	 &kp O
 	&kp Z	  &mt LCTRL X	 &mt LALT C  &mt LGUI V	 &kp B		&kp K	    &mt RGUI M  &none  &none   	 &none
-	&kp CAPS  &mt LSHFT ESC	 &none       &kp SPACE	 &kp C_PP	&kp C_POWER &mt ENTER	&none  &kp BSPC	 &kp F5
+	&kp CAPS  &mt LSHFT ESC	 &mt 1 TAB   &kp SPACE	 &kp C_PP	&kp C_POWER &mt ENTER	&mo 2  &kp BSPC	 &kp F5
 			>;
 
 			sensor-bindings = <
@@ -44,7 +46,7 @@
 			>;
 		};
 		lower_layer {
-            label = " LOWER";
+            	label = " LOWER";
 			bindings = <
 	&kp EXCL  &kp AT	   &mt RG(RS(N4)) HASH &kp DLLR	      &kp PRCNT	 &kp CARET  &kp AMPS       &kp STAR	  &none		&kp BSLH
 	&kp TAB	  &kp LT	   &kp GT	       &kp COLON      &kp DQT	 &kp HOME   &kp PIPE       &kp LBRC       &kp RBRC      &kp FSLH
@@ -59,7 +61,22 @@
 				&inc_dec_kp RG(RS(LBKT)) RG(RS(RBKT))
 			>;
 		};
+		raise_layer {
+            	label = " RAISE";
+			bindings = <
+	&none	    &kp PRCNT	      &kp UP		 &kp UNDER	    &kp EQUAL  &kp PLUS   &kp N7       &kp N8	    &kp N9        &kp STAR
+	&kp TAB	    &kp LEFT          &kp DOWN           &kp RIGHT          &kp DOT    &kp MINUS  &kp N4       &kp N5	    &kp N6	  &kp FSLH
+	&kp C_PREV  &mt LCTRL C_NEXT  &mt LALT C_BRI_UP	 &mt LGUI C_BRI_DN  &kp COMMA  &kp N0	  &mt RGUI N1  &mt RALT N2  &mt RCTRL N3  &none
+    	&trans      &trans	      &trans      	 &trans  	    &trans     &trans  	  &trans       &trans       &trans  	  &trans
+			>;
 
+			sensor-bindings = <
+				&inc_dec_kp LEFT RIGHT 
+				&inc_dec_kp C_VOL_DN C_VOL_UP
+				&inc_dec_kp DOWN UP
+				&inc_dec_kp RG(RS(LBKT)) RG(RS(RBKT))
+			>;
+		};
 
 
 
