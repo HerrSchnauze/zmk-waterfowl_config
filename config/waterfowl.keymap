@@ -110,8 +110,8 @@
     };
 	keymap {
 		compatible = "zmk,keymap";
-		label = " COLEMAK";
 		default_layer {
+            label = " COLEMAK";
 /* BASE
  *
  * ,----------------------------------.                      ,----------------------------------.
