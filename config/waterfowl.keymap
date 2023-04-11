@@ -38,14 +38,14 @@
                 timeout-ms = <50>;
                 key-positions = <A Z>;
                 bindings = <&kp C_MUTE>;
-                };
             };
 	    combo_sleep {
                 timeout-ms = <50>;
                 key-positions = <G J>;
                 bindings = <&kp C_PWR>;
-                };
             };
+		
+        }; // Place new combos above this
 	    
 	    
 	    
