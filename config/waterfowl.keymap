@@ -22,9 +22,6 @@
 
 /* Layers */
 #define BASE 0
-#define LOWER 1
-#define RAISE 2
-#define ADJUST 3
 
 /{
    
@@ -36,41 +33,6 @@
             then-layer = <ADJUST>;
         };
     };
-    combos {
-        compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <Q W>;
-            bindings = <&kp ESC>;
-        };
-        combo_sleep {
-            timeout-ms = <50>;
-            key-positions = <SQT RSHFT>;
-            bindings = <&kp C_PWR>;
-        };
-    };
-    //macros {
-        //next_tab: next_tab {
-        //    label = "Next Tab";
-        //    compatible = "zmk,behavior-macro";
-        //    #binding-cells = <0>;
-        //    bindings
-        //        = <&macro_press &kp RGUI &kp RSHIFT>
-        //        , <&macro_tap &kp RBKT>
-        //        , <&macro_release RGUI &kp RSHIFT>
-        //        ;
-        //};
-        //prev_tab: prev_tab {
-        //    label = "Previous Tab";
-        //    compatible = "zmk,behavior-macro";
-        //    #binding-cells = <0>;
-        //    bindings
-        //        = <&macro_press &kp RGUI &kp RSHIFT>
-        //        , <&macro_tap &kp LBKT>
-        //        , <&macro_release RGUI &kp RSHIFT>
-        //        ;
-        //};
-    //};
 	keymap {
 		compatible = "zmk,keymap";
 		default_layer {
@@ -103,55 +65,5 @@
 			>;
 		};
 
-		lower_layer {
-            label = " LOWER";
-			bindings = <
-	&kp EXCL	&kp AT		    &mt RG(RS(N4)) HASH &kp DLLR	    &kp PRCNT	&kp CARET   &kp AMPS        &kp STAR	    &none		    &kp BSLH
-	&kp TAB	    &kp LT	        &kp GT	            &kp COLON       &kp DQT		&kp HOME    &kp PIPE        &kp LBRC        &kp RBRC        &kp FSLH
-	&kp TAB		&mt LCTRL EQUAL	&mt LALT GRAVE	    &mt LGUI SEMI	&kp SQT		&kp END	    &mt RGUI LPAR   &mt RALT LBKT	&mt RCTL RBKT   &kp RPAR
-	&trans      &trans	        &trans      	    &trans  	    &trans      &trans  	&trans  	    &trans   	    &trans  	    &trans
-			>;
-
-			sensor-bindings = <
-				&inc_dec_kp LEFT RIGHT 
-				&inc_dec_kp C_VOL_DN C_VOL_UP
-				&inc_dec_kp DOWN UP
-				&inc_dec_kp RG(RS(LBKT)) RG(RS(RBKT))
-			>;
-		};
-
-		raise_layer {
-            label = " RAISE";
-			bindings = <
-	&none		&kp PRCNT	        &kp UP		        &kp UNDER	        &kp EQUAL	    &kp PLUS    &kp N7	    &kp N8		&kp N9		    &kp STAR
-	&kp TAB	    &kp LEFT            &kp DOWN            &kp RIGHT           &kp DOT		    &kp MINUS   &kp N4	    &kp N5	    &kp N6	        &kp FSLH
-	&kp C_PREV	&mt LCTRL C_NEXT    &mt LALT C_BRI_UP	&mt LGUI C_BRI_DN	&kp COMMA	    &kp N0	    &mt RGUI N1 &mt RALT N2 &mt RCTRL N3    &none
-    &trans      &trans	            &trans      	    &trans  	        &trans          &trans  	&trans  	&trans   	&trans  	    &trans
-			>;
-
-			sensor-bindings = <
-				&inc_dec_kp LEFT RIGHT 
-				&inc_dec_kp C_VOL_DN C_VOL_UP
-				&inc_dec_kp DOWN UP
-				&inc_dec_kp RG(RS(LBKT)) RG(RS(RBKT))
-			>;
-		};
-
-		Adjust_layer {
-            label = " ADJUST";
-			bindings = <
-	&bt BT_CLR                      &bt BT_SEL 0        &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3 	&kp F1  &kp F2	&kp F3  &kp F4  &kp F5
-	&ext_power EXT_POWER_TOGGLE_CMD	&none	            &none	        &none	        &kp D			&kp F6	&kp F7	&kp F8	&kp F9	&kp F10
-	&kp C_PWR	                    &none   	        &none   	    &none			&kp K	        &kp F11 &kp F12	&kp F13 &kp F14 &kp F15
-	&trans                          &trans      	    &trans      	&trans	        &trans	        &trans	&trans	&trans 	&trans	&trans
-			>;
-
-			sensor-bindings = <
-				&inc_dec_kp LEFT RIGHT 
-				&inc_dec_kp C_VOL_DN C_VOL_UP
-				&inc_dec_kp DOWN UP
-				&inc_dec_kp RG(RS(LBKT)) RG(RS(RBKT))
-			>;
-		};
 	};
 };
