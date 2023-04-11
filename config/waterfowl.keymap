@@ -16,6 +16,7 @@
 #define ADJUST 3
 
 /{
+// ===== CONDITIONAL LAYERS ===== 
 	conditional_layers {
 	    compatible = "zmk,conditional-layers";
 	    adjust_layer {
@@ -23,9 +24,28 @@
 		then-layer = <ADJUST>;
 	    };
 	};
+	
+	
+// ===== COMBOS =====
+	combos {
+            compatible = "zmk,combos";
+            combo_esc {
+                timeout-ms = <50>;
+                key-positions = <Q W>;
+                bindings = <&kp ESC>;
+            };
+            combo_sleep {
+                timeout-ms = <50>;
+                key-positions = <SQT RSHFT>;
+                bindings = <&kp C_PWR>;
+                };
+            };
+	    
+	    
+// ===== KEYMAP =====
 	keymap {
 		compatible = "zmk,keymap";
-		default_layer {
+default_layer {
 		label = " COLEMAK";
 /* BASE
  *
@@ -54,7 +74,7 @@
 				&inc_dec_kp RG(RS(LBKT)) RG(RS(RBKT))
 			>;
 		};
-		lower_layer {
+lower_layer {
             	label = " LOWER";
 			bindings = <
 	&kp EXCL  &kp AT	   &mt RG(RS(N4)) HASH &kp DLLR	      &kp PRCNT	 &kp CARET  &kp AMPS       &kp STAR	  &none		&kp BSLH
@@ -70,7 +90,7 @@
 				&inc_dec_kp RG(RS(LBKT)) RG(RS(RBKT))
 			>;
 		};
-		raise_layer {
+raise_layer {
             	label = " RAISE";
 			bindings = <
 	&none	    &kp PRCNT	      &kp UP		 &kp UNDER	    &kp EQUAL  &kp PLUS   &kp N7       &kp N8	    &kp N9        &kp STAR
@@ -102,7 +122,7 @@
 				&inc_dec_kp RG(RS(LBKT)) RG(RS(RBKT))
 			>;
 		};
-
+// ===== POST FILE CLOSING =====
 
 
 	};
