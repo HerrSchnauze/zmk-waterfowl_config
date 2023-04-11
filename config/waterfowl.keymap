@@ -42,7 +42,32 @@
             };
 	    
 	    
-// ===== TAP DANCE AND OTHER BEHAVIORS =====
+// ===== MACROS ===== (DISABLED BECAUSE ENCODERS)
+/*	    macros {
+                next_tab: next_tab {
+                    label = "Next Tab";
+                    compatible = "zmk,behavior-macro";
+                    #binding-cells = <0>;
+                    bindings
+                        = <&macro_press &kp RGUI &kp RSHIFT>
+                        , <&macro_tap &kp RBKT>
+                        , <&macro_release RGUI &kp RSHIFT>
+                        ;
+                };
+                prev_tab: prev_tab {
+                    label = "Previous Tab";
+                    compatible = "zmk,behavior-macro";
+                    #binding-cells = <0>;
+                    bindings
+                        = <&macro_press &kp RGUI &kp RSHIFT>
+                        , <&macro_tap &kp LBKT>
+                        , <&macro_release RGUI &kp RSHIFT>
+                        ;
+                    };
+                };*/
+	    
+	    
+// ===== TAP DANCES =====
 	    behaviors {
                 td_0: tap_dance_0 {
                     compatible = "zmk,behavior-tap-dance";
