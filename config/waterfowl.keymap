@@ -90,6 +90,13 @@
                     tapping-term-ms = <200>;
                     bindings = <&kp FSLH>, <&kp UNDER>;
                 };
+		td_3: tap_dance_3 {
+                    compatible = "zmk,behavior-tap-dance";
+                    label = "TAP_DANCE_SHIFT_LEFT";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <TAPPING_TERM_MS>;
+                    bindings = <&kp LEFT_SHIFT>, <&caps_word>, <&kp CAPSLOCK>;
+                };
                 td_4: tap_dance_4 {
                     compatible = "zmk,behavior-tap-dance";
                     label = "Q_W_H";
@@ -122,7 +129,7 @@ default_layer {
 	&kp Q	  &kp W		 &kp F	     &kp P      &kp G		&kp J	    &kp L	&kp U  &kp Y	 &kp SEMICOLON
 	&kp A	  &kp R	         &kp S	     &kp T	 &kp D		&kp H	    &kp N	&kp E  &kp I	 &kp O
 	&kp Z	  &mt LCTRL X	 &mt LALT C  &mt LGUI V	 &kp B		&kp K	    &mt RGUI M  &td_0  &td_1   	 &td_2
-	&kp CAPS  &mt LSHFT ESC	 &lt 1 TAB   &kp SPACE	 &kp C_PP	&kp C_POWER &kp ENTER	&mo 2  &kp BSPC	 &kp F5
+	&kp CAPS  &ts_3 	 &lt 1 TAB   &kp SPACE	 &kp C_PP	&kp C_POWER &kp ENTER	&mo 2  &kp BSPC	 &kp F5
 			>;
 
 			sensor-bindings = <
