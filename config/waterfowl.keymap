@@ -16,11 +16,6 @@
 #define ADJUST 3
 
 /{
-// ===== DEFINES TAP TERM AND TYPE FOR MT =====
-&mt {
-    tapping-term-ms = <125>;
-    flavor = "tap-preferred";
-};
 // ===== CONDITIONAL LAYERS ===== 
 	conditional_layers {
 	    compatible = "zmk,conditional-layers";
@@ -135,8 +130,14 @@
                 };
 	    
 	    
-// ===== TAP DANCES =====
+// ===== TAP DANCES AND OTHER BEHAVIORS =====
 	    behaviors {
+	    // ===== DEFINES TAP TERM AND TYPE FOR MT =====
+                &mt {
+                    tapping-term-ms = <125>;
+                    flavor = "tap-preferred";
+                };
+	    // ===== TAP DANCES =====
                 td_0: tap_dance_0 {
                     compatible = "zmk,behavior-tap-dance";
                     label = "ALT_COMMA_MINUS";
