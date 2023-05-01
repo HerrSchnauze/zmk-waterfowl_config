@@ -21,17 +21,17 @@
             compatible = "zmk,combos";
             combo_esc {
                 timeout-ms = <50>;
-                key-positions = <Q W>;
+                key-positions = <0 1>;
                 bindings = <&kp ESC>;
             };
             combo_mute {
                 timeout-ms = <50>;
-                key-positions = <A Z>;
+                key-positions = <10 20>;
                 bindings = <&kp C_MUTE>;
             };
 	    combo_sleep {
                 timeout-ms = <50>;
-                key-positions = <G J>;
+                key-positions = <4 5>;
                 bindings = <&kp C_PWR>;
             };
 		
@@ -52,7 +52,7 @@
 	    macros {
 	        email_0: email_0 {
                     compatible = "zmk,behavior-macro";
-                    label = "type_email_p";
+                    label = "type_email_0";
                     #binding-cells = <0>;
                     wait-ms = <30>;
                     tap-ms = <40>;
@@ -66,7 +66,7 @@
                 };
 		email_1: email_1 {
                     compatible = "zmk,behavior-macro";
-                    label = "type_email_p";
+                    label = "type_email_1";
                     #binding-cells = <0>;
                     wait-ms = <30>;
                     tap-ms = <40>;
@@ -80,7 +80,7 @@
                 };
 		email_2: email_2 {
                     compatible = "zmk,behavior-macro";
-                    label = "type_email_p";
+                    label = "type_email_2";
                     #binding-cells = <0>;
                     wait-ms = <30>;
                     tap-ms = <40>;
@@ -94,7 +94,7 @@
                 };
 		email_3: email_3 {
                     compatible = "zmk,behavior-macro";
-                    label = "type_email_p";
+                    label = "type_email_3";
                     #binding-cells = <0>;
                     wait-ms = <30>;
                     tap-ms = <40>;
