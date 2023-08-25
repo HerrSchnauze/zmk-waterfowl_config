@@ -202,7 +202,7 @@ default_layer {
 	&kp Q	  &kp W		 &kp F	     &kp P       &kp G		&kp J	    &kp L	&kp U  &kp Y	 &kp SEMICOLON
 	&kp A	  &kp R	         &kp S	     &kp T	 &kp D		&kp H	    &kp N	&kp E  &kp I	 &kp O
 	&kp Z	  &hm LCTRL X	 &hm LALT C  &hm LGUI V	 &kp B		&kp K	    &hm RGUI M  &td_0  &td_1   	 &td_2X
-	&trans  &kp LEFT_SHIFT &lt 1 TAB   &kp SPACE	 &kp C_PP	&kp F5	    &kp ENTER	&mo 2  &kp BSPC	 &kp C_PWR
+	&none  &kp LEFT_SHIFT &lt 1 TAB   &kp SPACE	 &kp C_PP	&kp F5	    &kp ENTER	&mo 2  &kp BSPC	 &kp C_PWR
 			>;
 
 			sensor-bindings = <
