@@ -57,9 +57,11 @@
                     wait-ms = <30>;
                     tap-ms = <40>;
                     bindings = <
-                        &kp J  &kp D &kp O &kp C &kp K &kp E &kp T &kp T
+			&kp H &kp E &kp N &kp D &kp R &kp I &kp K 
+			&kp DOT
+			&kp H &kp I &kp L &kp L &kp E &kp B &kp R &kp E &kp C &kp H &kp T
                         &kp AT_SIGN
-                        &kp G &kp M &kp A &kp I &kp L
+                        &kp J &kp A &kp C &kp O &kp B &kp S
                         &kp DOT
                         &kp C &kp O &kp M
                     >;
